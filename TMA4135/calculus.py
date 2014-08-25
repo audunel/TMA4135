@@ -1,8 +1,13 @@
 from __future__ import division
 
-def secant_method(x0, x1, f, epsilon=0.001, n=50):
+def secant(x0, x1, f, epsilon=0.001, n=50):
     """
     Computes the root of a function f given two starting points x_0 and x_1. The function terminates when the function is within epsilon of zero (default epsilon = 0.001) or exceeds n iterations (default n = 50)
+
+    Pros : 
+    - Fast convergence
+    Cons :
+    - Does not always converge
     """
     for i in range(n):
         if abs(f(x1) - f(x0)) < epsilon:
