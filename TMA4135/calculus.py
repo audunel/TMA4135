@@ -2,7 +2,7 @@ from __future__ import division
 
 def secant(x0, x1, f, epsilon=0.001, n=50):
     """
-    Computes the root of a function f given two starting points x_0 and x_1. The function terminates when the function is within epsilon of zero (default epsilon = 0.001) or exceeds n iterations (default n = 50)
+    Computes the root of a function f given two starting points x_0 and x_1. The function terminates when the difference between f(x1) and f(x2) is within epsilon of zero (default epsilon = 0.001) or exceeds n iterations (default n = 50)
 
     Pros : 
     - Fast convergence
