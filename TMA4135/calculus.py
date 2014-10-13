@@ -15,16 +15,10 @@ def secant(f, x0, x1, epsilon=0.0001, n=50):
         x_temp = x1
         x1 = x1 - f(x1) * (x1 - x0) / (f(x1) - f(x0))
         x0 = x_temp
-<<<<<<< HEAD
     print 'Maximum number of iterations exceeded! Terminated at solution x = ' + str(x1)
     return x1
 
-main()
-=======
-    print('Maximum number of iterations exceeded! Terminated at solution x = ', x1)
-
-
-def simpson(f, a, b, m):
+def simpson(f, a, b, m=25):
     '''
     Given a function f  and endpoints a and b, approximates the integral of f from a to b using 2m steps
     '''
@@ -37,4 +31,3 @@ def simpson(f, a, b, m):
         s += 2 * f(a + i*h)
 
     return (h*s)/3
->>>>>>> master
